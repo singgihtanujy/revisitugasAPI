@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 
 response = WS.sendRequest(findTestObject('Tugas API Post'))
 
-WS.verifyElementPropertyValue(response, 'name', 'singgih')
+WS.verifyElementPropertyValue(response, 'id', '101')
 
-WS.verifyElementPropertyValue(response, 'job', 'leader')
+WS.verifyResponseStatusCode(response, 201)
 

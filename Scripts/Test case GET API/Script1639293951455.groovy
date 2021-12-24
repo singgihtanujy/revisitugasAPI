@@ -19,9 +19,11 @@ import org.openqa.selenium.Keys as Keys
 
 response = WS.sendRequest(findTestObject('Tugas API GET'))
 
-WS.verifyElementPropertyValue(response, 'data.email', 'janet.weaver@reqres.in')
+WS.verifyElementPropertyValue(response, 'userId', '1')
 
-WS.verifyElementPropertyValue(response, 'data.first_name', 'Janet')
+WS.verifyElementPropertyValue(response, 'id', '1')
 
-WS.verifyElementPropertyValue(response, 'data.last_name', 'Weaver')
+WS.verifyElementPropertyValue(response, 'title', 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit')
+
+WS.verifyResponseStatusCode(response, 200)
 
